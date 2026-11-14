@@ -1,0 +1,17 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "lockally-key",
+      "description": "Lockally API key (lk_live_...)",
+      "password": true
+    }
+  ],
+  "servers": {
+    "lockally": {
+      "type": "http",
+      "url": "https://mcp.lockally.com/",
+      "headers": { "Authorization": "Bearer ${input:lockally-key}" }
+    }
+  }
+}

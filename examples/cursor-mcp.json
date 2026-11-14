@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "lockally": {
+      "url": "https://mcp.lockally.com/",
+      "headers": { "Authorization": "Bearer lk_live_your_key" }
+    }
+  }
+}

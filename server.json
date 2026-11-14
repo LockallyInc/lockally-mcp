@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.lockally/email",
+  "title": "Lockally Email",
+  "description": "Email inbox for your AI agent: read conversations, triage, reply in-thread with approval.",
+  "version": "1.0.3",
+  "websiteUrl": "https://lockally.com",
+  "repository": {
+    "url": "https://github.com/lockallyinc/lockally-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.lockally.com/",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token. Clients that support OAuth should omit this and let discovery run: an unauthenticated request returns 401 with WWW-Authenticate pointing at /.well-known/oauth-protected-resource, which names https://api.lockally.com as the authorization server (OAuth 2.1, PKCE S256, CIMD). This header is the manual alternative for clients that do not, using a Lockally API key (lk_live_... or lk_test_...).",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
