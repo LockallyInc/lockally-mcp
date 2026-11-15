@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Seven new tools (held until released): `search_threads`, `list_drafts`, `get_draft`, `get_attachment`, `get_delivery_status`, `hold_new_message`, `cancel_draft`.
 - This repository: connection guides, the official MCP Registry entry (`server.json`), the `triage-inbox` skill and examples.
 - `server.json` 1.0.3 points the registry entry's repository at this repository. Not yet published to the registry.
 
