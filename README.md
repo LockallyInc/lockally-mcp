@@ -6,6 +6,8 @@ An email inbox for your AI agent. Connect a Lockally mailbox to ChatGPT, Claude,
 
 Most email tools let an assistant send. This one lets it receive.
 
+**Now in the ChatGPT plugin directory:** [add Lockally to ChatGPT](https://chatgpt.com/plugins/plugin_asdk_app_6af5574ad81c8191affe0f19cf37004c).
+
 ```text
 Server URL:  https://mcp.lockally.com/
 Transport:   Streamable HTTP
@@ -29,7 +31,9 @@ Settings, then Connectors, then **Add custom connector**. Enter `https://mcp.loc
 
 ### ChatGPT
 
-Add a custom MCP server with the URL `https://mcp.lockally.com/` and choose OAuth. Sign in with your Lockally account when prompted.
+Add Lockally from the ChatGPT plugin directory: open [Lockally in ChatGPT](https://chatgpt.com/plugins/plugin_asdk_app_6af5574ad81c8191affe0f19cf37004c), add it, and sign in with your Lockally account when prompted. Then choose which mailboxes ChatGPT may use.
+
+Or add a custom MCP server yourself with the URL `https://mcp.lockally.com/` and choose OAuth.
 
 ### Claude Code
 
