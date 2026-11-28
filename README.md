@@ -89,6 +89,13 @@ Every message body is returned marked as untrusted third-party content, and mess
 | `reply_or_hold_for_approval` | Saves a reply for a person to approve; sends only when called with `hold: false` and the approval policy allows | no | yes | yes |
 | `reply_to_thread` | Sends a reply in an existing conversation | no | yes | yes |
 | `send_message` | Starts a new conversation from a mailbox | no | yes | yes |
+| `search_threads` | Finds conversations by text, sender or date across reachable mailboxes (subjects, addresses and previews, not full bodies) | yes | no | no |
+| `list_drafts` | Lists replies and new emails waiting in Lockally, with their status | yes | no | no |
+| `get_draft` | Returns one draft and its status, including why it was held | yes | no | no |
+| `get_attachment` | Returns the text of a plain-text attachment up to 256 KiB, or only the name, type and size of anything else | yes | no | no |
+| `get_delivery_status` | Delivery status and attempts for a message sent through Lockally | yes | no | no |
+| `hold_new_message` | Writes a new email and saves it for a person to approve; never sends by itself | no | no | no |
+| `cancel_draft` | Withdraws a held draft this connection's person created; sends nothing | no | no | no |
 
 Reading never marks mail as read. `analyze_thread` sends the subject and short message previews to an AI model provider, needs AI classification switched on by a workspace administrator, and is available from 26 November 2026. See the [privacy policy](https://lockally.com/legal/privacy/), section 6.
 
@@ -99,6 +106,9 @@ Reading never marks mail as read. `analyze_thread` sends the subject and short m
 [`skills/triage-inbox`](skills/triage-inbox/SKILL.md) is an agent skill that works through an inbox: it sorts recent conversations into needs a reply, needs a decision, no action and suspicious, saves replies to the obvious ones for approval, never sends, and reports anything that tries to instruct it.
 
 ## Example prompts
+
+- "Find the email about the October invoice from last month."
+- "Has my held reply to Ada been approved yet?"
 
 - "Which inboxes can you see in Lockally?"
 - "Go through support@ and tell me what needs a reply, what needs a decision, and what I can ignore."
